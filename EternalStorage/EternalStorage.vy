@@ -12,6 +12,7 @@ def upgradeVersion(_newVersion:address):
     assert msg.sender == self.owner
     self.latestVersion = _newVersion
 
+@view
 @external
 def getUint(_key:bytes32) -> uint256:
     return self.uIntStorage[_key]
